@@ -1,0 +1,34 @@
+# Project Management System
+spring:
+  application:
+    name: Project Management System
+
+#datasource configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/prj_mgmnt
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+#server config
+server:
+  port: 8080
+
+#swagger ui configuration
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    tryItOutEnabled: true
+    operationsSorter: method
+    tagsSorter: alpha
+    filter: true
+  packages-to-scan: com.ajaysw.ProjectManagementSystem.controller
+
+#  http://localhost:8080/swagger-ui/index.html
