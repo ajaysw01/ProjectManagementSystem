@@ -1,4 +1,5 @@
 package com.ajaysw.ProjectManagementSystem.exception;
+
 /**
  * @author Ajay Wankhade
  */

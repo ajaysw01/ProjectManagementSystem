@@ -2,6 +2,7 @@ package com.ajaysw.ProjectManagementSystem.entity;
 
 import com.ajaysw.ProjectManagementSystem.enums.TaskStatus;
 import lombok.Data;
+
 /**
  * @author Ajay Wankhade
  */

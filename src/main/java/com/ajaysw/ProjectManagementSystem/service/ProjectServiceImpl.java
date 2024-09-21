@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
 /**
  * @author Ajay Wankhade
  */
@@ -63,6 +64,7 @@ public class ProjectServiceImpl implements ProjectService {
         return convertToDTO(projectRepository.findById(projectId)
                 .orElseThrow(() -> new ResourceNotFoundException("Project not found with id " + projectId)));
     }
+
     @Override
     public List<TaskDTO> getTasksByProject(Long projectId) {
         return taskRepository.findByProjectId(projectId).stream()
@@ -85,4 +87,5 @@ public class ProjectServiceImpl implements ProjectService {
         dto.setName(task.getName());
         dto.setStatus(task.getStatus());
         return dto;
-    }}
+    }
+}

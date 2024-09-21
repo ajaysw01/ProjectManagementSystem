@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
 /**
  * @author Ajay Wankhade
  */
@@ -111,7 +112,6 @@ public class TaskServiceImpl implements TaskService {
         Task savedTask = taskRepository.save(task);
         return convertToDTO(savedTask); // Convert saved Task to TaskDTO
     }
-
 
 
     // New method to convert Task to TaskDTO
